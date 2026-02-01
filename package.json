@@ -1,0 +1,59 @@
+{
+  "name": "@rironib/seo-manager",
+  "version": "1.0.0",
+  "description": "A smart SEO manager for React and Next.js.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "seo-manager": "./bin/init.js"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean --minify",
+    "dev": "tsup src/index.ts --format cjs,esm --watch --dts",
+    "lint": "tsc",
+    "init": "node ./bin/init.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rironib/seo-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rironib/seo-manager/issues"
+  },
+  "homepage": "https://github.com/rironib/seo-manager#readme",
+  "keywords": [
+    "seo",
+    "metadata",
+    "react",
+    "zero-dependency",
+    "open-graph",
+    "twitter-cards"
+  ],
+  "author": "Antigravity",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "next": "^16.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}

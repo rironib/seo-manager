@@ -4,7 +4,7 @@ const path = require("path");
 
 const isTypeScript = fs.existsSync(path.join(process.cwd(), "tsconfig.json"));
 const extension = isTypeScript ? "ts" : "js";
-const configDir = path.join(process.cwd(), "@config");
+const configDir = path.join(process.cwd(), "config");
 const configFile = path.join(configDir, `seo.${extension}`);
 
 const defaultConfig = `${isTypeScript ? 'import { SeoProps } from "@rironib/seo-manager";\n\nexport const seoConfig: SeoProps = {' : "export const seoConfig = {"}
@@ -26,14 +26,14 @@ if (!fs.existsSync(configDir)) {
 
 if (fs.existsSync(configFile)) {
   console.log(
-    `✅ Configuration file already exists at /@config/seo.${extension}`,
+    `✅ Configuration file already exists at /config/seo.${extension}`,
   );
 } else {
   fs.writeFileSync(configFile, defaultConfig);
   console.log(
-    `🚀 Created SEO Manager configuration file at /@config/seo.${extension}`,
+    `🚀 Created SEO Manager configuration file at /config/seo.${extension}`,
   );
   console.log(
-    `You can now import seoConfig from "/@config/seo" in your project.`,
+    `You can now import seoConfig from "./config/seo" in your project.`,
   );
 }

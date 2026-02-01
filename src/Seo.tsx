@@ -1,19 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-
-export interface SeoProps {
-  title?: string;
-  description?: string;
-  url?: string;
-  image?: string;
-  type?: string;
-  twitterCard?: string;
-  keywords?: string[];
-  themeColor?: string;
-  noindex?: boolean;
-  siteName?: string;
-  canonical?: string;
-}
+import { SeoProps } from "./server";
 
 const updateOrCreateMeta = (
   name: string,

@@ -1,6 +1,7 @@
 "use client";
 import React, { createContext, ReactNode, useContext } from "react";
-import { Seo, SeoProps } from "./Seo";
+import { Seo } from "./Seo";
+import { SeoProps } from "./server";
 
 interface SeoContextType {
   config?: SeoProps;
